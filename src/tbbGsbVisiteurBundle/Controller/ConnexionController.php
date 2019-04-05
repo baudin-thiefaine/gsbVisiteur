@@ -33,7 +33,6 @@ class ConnexionController extends Controller {
         return $this->render('@tbbGsbVisiteur/Connexion/pageAccueil.html.twig');
     }
     
-    
     public function connexionAction(Request $request){
         $form = $this->createFormBuilder()
 	            ->add('NomDUtilisateur', TextType::class)
@@ -58,7 +57,6 @@ class ConnexionController extends Controller {
 
     
     public function deconnexionAction(){
-        //$session
         $session = $this->get('session');
         $session->clear();
         return $this->redirectToRoute('tbb_gsb_visiteur_homepage');
@@ -88,7 +86,7 @@ class ConnexionController extends Controller {
                 return ('@tbbGsbVisiteur/Connexion/pageAccueil.html.twig');
             }
             else{
-                return '@tbbGsbVisiteur/Connexion/connexionErreur.html.twig';
+                return ('@tbbGsbVisiteur/Connexion/connexionErreur.html.twig');
             }
         }
     }
