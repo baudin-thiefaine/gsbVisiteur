@@ -1,0 +1,4 @@
+services:
+#    tbb_gsb_visiteur.example:
+#        class: tbbGsbVisiteurBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

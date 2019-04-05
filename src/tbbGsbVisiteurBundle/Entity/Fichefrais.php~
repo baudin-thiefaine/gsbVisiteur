@@ -1,0 +1,102 @@
+<?php
+
+namespace tbbGsbVisiteurBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Fichefrais
+ *
+ * @ORM\Table(name="fichefrais", indexes={@ORM\Index(name="idEtat", columns={"idEtat"}), @ORM\Index(name="idVisiteur", columns={"idVisiteur"})})
+ * @ORM\Entity
+ */
+class Fichefrais
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="idFicheFrais", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idfichefrais;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mois", type="string", length=128, nullable=false, options={"fixed"=true})
+     */
+    private $mois;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="annee", type="integer", nullable=false)
+     */
+    private $annee;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="nbJustificatifs", type="integer", nullable=true)
+     */
+    private $nbjustificatifs;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="montantValide", type="decimal", precision=10, scale=2, nullable=true)
+     */
+    private $montantvalide;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="dateModif", type="date", nullable=true)
+     */
+    private $datemodif;
+
+    /**
+     * @var \Etat
+     *
+     * @ORM\ManyToOne(targetEntity="Etat")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idEtat", referencedColumnName="id")
+     * })
+     */
+    private $idetat;
+
+    /**
+     * @var \Visiteur
+     *
+     * @ORM\ManyToOne(targetEntity="Visiteur")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idVisiteur", referencedColumnName="id")
+     * })
+     */
+    private $idvisiteur;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="Fraisforfait", inversedBy="idfichefrais")
+     * @ORM\JoinTable(name="lignefraisforfait",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="idFicheFrais", referencedColumnName="idFicheFrais")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="idFraisForfait", referencedColumnName="id")
+     *   }
+     * )
+     */
+    private $idfraisforfait;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idfraisforfait = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}

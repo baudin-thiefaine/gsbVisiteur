@@ -1,0 +1,21 @@
+{# empty Twig template #}
+<form action="..\app_dev.php\consultationDeLaFiche" method="POST">
+{% if lesFiches == null %}
+    <select>
+        <option value="none">none</option>
+    </select>
+{% elseif lesFiches != null %}
+      <select>
+    {% for laFiche in lesFiches %}
+       
+        {% set dateFiche =laFiche.mois~laFiche.annee %}
+       
+            <option name="ficheSelectionner" value="{{laFiche.idfichefrais}}">{{dateFiche}}</option>
+        
+    {% endfor %}
+      </select>
+{% endif %}
+<input type="submit"/>
+</form>
+
+<a href="..\app_dev.php\index">Retour à l'accueil</a>

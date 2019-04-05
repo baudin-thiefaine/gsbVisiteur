@@ -1,0 +1,64 @@
+<h1>Fiche de {{ fiche.mois }} {{ fiche.annee }}.</h1>
+
+<h2>Recapitulatif de votre fiche: </h2>
+
+nombre de justificatifs : {{fiche.nbjustificatifs}}
+
+<br/><br/>############### PARTIE DU RECAP DES FRAIS FORFAIT ##################################<br/><br/>
+
+{%if fraisForfait is not empty %}
+<table>
+    <tr><td>type de frais</td><td>quantite</td></tr>
+{%endif%}
+
+{% for unFraisForfait in fraisForfait %}
+    <tr>
+    <td>{{ unFraisForfait.idFraisForfait.id }} </td><td>{{ unFraisForfait.quantite }}</td>
+    </tr>
+    {%else%}
+        Vous n'avez aucun frais forfait.
+{%endfor%}
+{%if fraisForfait is not empty %}
+    </table>
+{%endif%}
+
+
+
+<br/><br/>############### PARTIE DU RECAP DES FRAIS HORS FORFAIT ##########################<br/><br/>
+
+{%if fraisHorsForfait is not empty %}
+<table>
+    <tr><td>libelle</td><td>montant</td><td>date</td></tr>
+{%endif%}
+
+
+{% for unFrais in fraisHorsForfait %}
+    <tr>
+    <td>{{ unFrais.libelle }} </td><td>{{ unFrais.montant }}</td><td>{{ unFrais.date | date('Y-m-d') }}</td>
+    </tr>
+    {%else%}
+        Vous n'avez aucun frais hors forfait.
+{%endfor%}
+
+
+{%if fraisHorsForfait is not empty %}
+    </table>
+{%endif%}
+
+
+
+<h2>Ajouter des frais forfait</h2>
+{# ajouter formulaire de saisie d'un frais forfait. Ce form devra renvoyer sur cette page apres traitement #}
+{{form(formFraisForfait)}} 
+
+
+
+<h2>Ajouter des frais hors forfait</h2>
+{# ajouter formulaire de saisie d'un frais hors forfait. Ce form devra renvoyer sur cette page apres traitement #}
+
+{{form(formFraisHorsForfait)}}
+<br/>
+<a href="..\app_dev.php\index">Retour à l'accueil</a>
+
+
+

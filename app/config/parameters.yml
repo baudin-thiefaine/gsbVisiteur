@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 10.30.0.113
+    database_port: null
+    database_name: BAUDIN
+    database_user: BAUDIN
+    database_password: tbaudin
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 3e52cf963ba4f4b5bf86113f29ee2037c8b93341

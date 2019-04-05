@@ -1,0 +1,20 @@
+tbb_gsb_visiteur_homepage:
+    path:     /visiteur
+    defaults: { _controller:tbbGsbVisiteurBundle:Connexion:connexion }
+
+tbb_gsb_visiteur_retourAccueil:
+    path:   /index
+    defaults: { _controller:tbbGsbVisiteurBundle:Connexion:index }
+    
+tbb_gsb_visiteur_deco:
+    path:   /deconnexion
+    defaults: { _controller:tbbGsbVisiteurBundle:Connexion:deconnexion }  
+    
+tbb_gsb_visiteur_renseignerFiche:
+    path:   /renseignerFiche
+    defaults: { _controller:tbbGsbVisiteurBundle:RenseignerFiche:renseignerFiche }  
+    
+tbb_gsb_visiteur_consulterFiche:
+    path:   /consulterFiche
+    defaults: { _controller:tbbGsbVisiteurBundle:ConsultationFiche:getMoisFicheAValider } 
+

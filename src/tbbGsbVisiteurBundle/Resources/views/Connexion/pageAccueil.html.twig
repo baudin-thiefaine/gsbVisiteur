@@ -1,0 +1,23 @@
+{% if app.session.get('idVisiConnecte') != null %}
+Bonjour <br/>
+
+
+votre identifiant : {{ app.session.get('idVisiConnecte') }}
+
+<br/>
+
+VOUS ETES CONNECTE EN TANT QUE VISITEUR
+
+<br/>
+<a href="..\app_dev.php\renseignerFiche">Renseigner une fiche de frais</a>
+<br/>
+<a href="..\app_dev.php\consulterFiche">Voir mes fiches de frais</a>
+<br/>
+
+<a href="..\app_dev.php\deconnexion">deconnexion</a>
+
+
+
+{%else %}
+    <meta http-equiv="refresh" content="0; url=..\app_dev.php\visiteur" />
+{% endif%}

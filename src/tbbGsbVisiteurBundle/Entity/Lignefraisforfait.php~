@@ -1,0 +1,71 @@
+<?php
+
+namespace tbbGsbVisiteurBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Lignefraisforfait
+ *
+ * @ORM\Table(name="lignefraisforfait")
+ * @ORM\Entity(repositoryClass="tbbGsbVisiteurBundle\Repository\LignefraisforfaitRepository")
+ */
+class Lignefraisforfait
+{
+    
+    /**
+     * @var \Fichefrais
+     *
+     * @ORM\ManyToOne(targetEntity="Fraisforfait")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id", referencedColumnName="id")
+     * })
+     */
+    private $idFraisForfait;
+    
+    /**
+     * @var \Fichefrais
+     *
+     * @ORM\ManyToOne(targetEntity="Fichefrais")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idFicheFrais", referencedColumnName="idFicheFrais")
+     * })
+     */
+    private $idfichefrais;
+    
+    
+    
+    
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="quantite", type="integer")
+     */
+    private $quantite;
+
+
+    
+    /**
+     * Set quantite.
+     *
+     * @param int $quantite
+     *
+     * @return Lignefraisforfait
+     */
+    public function setQuantite($quantite)
+    {
+        $this->quantite = $quantite;
+
+        return $this;
+    }
+
+    /**
+     * Get quantite.
+     *
+     * @return int
+     */
+    public function getQuantite()
+    {
+        return $this->quantite;
+    }
+}
