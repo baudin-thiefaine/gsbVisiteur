@@ -27,6 +27,22 @@ img{
     heigth: auto;
    
 }
+#erreurConnexion{
+    background-color: #ffa5a5;
+    opacity: 50%;
+    margin-left: 24%; 
+    margin-right: 24%;
+    color: red;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    font-weight:  lighter;
+   
+}
+
+#btnRetourAccueil{
+    color: black;
+    
+}
 #titre{
     
     font-size: 200%;
