@@ -60,16 +60,19 @@ class __TwigTemplate_d52e212c560aacdb14d76d049eb9052a5af1b4c31511bd243c95ecaf698
     </head>
     <body>
         <header>
-            GSB MODULE VISITEUR
-        </header
+            
+            <img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Colombus_Isle.JPG/1200px-Colombus_Isle.JPG\" alt=\"LogoGSB\"/>
+            
+            <div id=\"titre\">GSB MODULE VISITEUR </div>
+        </header>
         ";
-        // line 15
+        // line 18
         $this->displayBlock('body', $context, $blocks);
-        // line 16
+        // line 19
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 17
-        echo "    </body>
+        // line 20
+        echo "</body>
 </html>
 ";
         
@@ -120,7 +123,7 @@ class __TwigTemplate_d52e212c560aacdb14d76d049eb9052a5af1b4c31511bd243c95ecaf698
 
     }
 
-    // line 15
+    // line 18
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -137,7 +140,7 @@ class __TwigTemplate_d52e212c560aacdb14d76d049eb9052a5af1b4c31511bd243c95ecaf698
 
     }
 
-    // line 16
+    // line 19
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -166,7 +169,7 @@ class __TwigTemplate_d52e212c560aacdb14d76d049eb9052a5af1b4c31511bd243c95ecaf698
 
     public function getDebugInfo()
     {
-        return array (  141 => 16,  124 => 15,  111 => 7,  102 => 6,  84 => 5,  72 => 17,  69 => 16,  67 => 15,  57 => 9,  55 => 6,  51 => 5,  45 => 1,);
+        return array (  144 => 19,  127 => 18,  114 => 7,  105 => 6,  87 => 5,  75 => 20,  72 => 19,  70 => 18,  57 => 9,  55 => 6,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -183,11 +186,14 @@ class __TwigTemplate_d52e212c560aacdb14d76d049eb9052a5af1b4c31511bd243c95ecaf698
     </head>
     <body>
         <header>
-            GSB MODULE VISITEUR
-        </header
+            
+            <img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Colombus_Isle.JPG/1200px-Colombus_Isle.JPG\" alt=\"LogoGSB\"/>
+            
+            <div id=\"titre\">GSB MODULE VISITEUR </div>
+        </header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
-    </body>
+</body>
 </html>
 ", "base.html.twig", "/var/www/html/gsbVisiteur/app/Resources/views/base.html.twig");
     }

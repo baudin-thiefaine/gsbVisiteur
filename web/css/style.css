@@ -9,5 +9,45 @@ and open the template in the editor.
 */
 
 header{
-    background-color: red;
+    padding-right: 150px;
+    background-color: #1a8cff;
+    text-align: center;
+    margin: auto;
+    height: 200px;
+    
+}
+
+img{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float:left;
+    max-width: 200px;
+    heigth: auto;
+   
+}
+#titre{
+    
+    font-size: 200%;
+    font-family: serif;
+    padding-top: 75px;
+    text-transform: uppercase;
+    text-decoration: shadow;
+    
+}
+
+body{
+    background-color: #99ccff;
+}
+
+
+#formConnexion{
+    margin-top: 100px;
+    margin-left: 35%;
+    margin-right: 35%;
+    
+}
+form{
+    text-align: center;
 }

@@ -49,8 +49,7 @@ class __TwigTemplate_8a906206b737f1ccd1c5f2a6c954e670efdc2cebafd819ee3494b197076
         echo "
 
 </div>
-    
-    ";
+";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -83,7 +82,6 @@ class __TwigTemplate_8a906206b737f1ccd1c5f2a6c954e670efdc2cebafd819ee3494b197076
     {{ form(form) }}
 
 </div>
-    
-    ", "@tbbGsbVisiteur/Connexion/connexion.html.twig", "/var/www/html/gsbVisiteur/src/tbbGsbVisiteurBundle/Resources/views/Connexion/connexion.html.twig");
+", "@tbbGsbVisiteur/Connexion/connexion.html.twig", "/var/www/html/gsbVisiteur/src/tbbGsbVisiteurBundle/Resources/views/Connexion/connexion.html.twig");
     }
 }
