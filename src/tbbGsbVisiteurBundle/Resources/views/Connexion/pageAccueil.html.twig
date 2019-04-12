@@ -1,25 +1,25 @@
 
 
 {% if app.session.get('idVisiConnecte') != null %}
-    
-Bonjour <br/>
+    {% include ('base.html.twig') %}
+    <div id="recap">
+        Bonjour <br/>
 
+        votre identifiant : {{ app.session.get('idVisiConnecte') }}
+        
+        <br/>
 
-votre identifiant : {{ app.session.get('idVisiConnecte') }}
-
-<br/>
-
-VOUS ETES CONNECTE EN TANT QUE VISITEUR
-
-<br/>
-<a href="..\app_dev.php\renseignerFiche">Renseigner une fiche de frais</a>
-<br/>
-<a href="..\app_dev.php\consulterFiche">Voir mes fiches de frais</a>
-<br/>
-
-<a href="..\app_dev.php\deconnexion">deconnexion</a>
-
-
+        VOUS ETES CONNECTE EN TANT QUE VISITEUR
+        <br/>
+        <a href="..\app_dev.php\deconnexion"><button>deconnexion</button></a>
+    </div>
+    <div id="callToActions">
+        <br/>
+        <a href="..\app_dev.php\renseignerFiche"><button id="btnMenu">Renseigner une fiche de frais</button></a>
+        <br/>
+        <a href="..\app_dev.php\consulterFiche"><button id="btnMenu">Voir mes fiches de frais</button></a>
+        <br/>
+    </div>
 
 {%else %}
     <meta http-equiv="refresh" content="0; url=..\app_dev.php\visiteur" />

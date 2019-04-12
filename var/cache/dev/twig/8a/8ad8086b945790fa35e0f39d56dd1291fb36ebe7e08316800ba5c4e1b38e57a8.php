@@ -38,33 +38,40 @@ class __TwigTemplate_6aa9ae6df904579d3a984b87a2187cf3d3a38d1210b3e3ed0a7bc8cac11
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@tbbGsbVisiteur/Connexion/pageAccueil.html.twig"));
 
         // line 1
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 1, $this->source); })()), "session", []), "get", [0 => "idVisiConnecte"], "method") != null)) {
-            // line 2
-            echo "Bonjour <br/>
+        echo "
 
-
-votre identifiant : ";
+";
+        // line 3
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 3, $this->source); })()), "session", []), "get", [0 => "idVisiConnecte"], "method") != null)) {
+            // line 4
+            echo "    ";
+            $this->loadTemplate("base.html.twig", "@tbbGsbVisiteur/Connexion/pageAccueil.html.twig", 4)->display($context);
             // line 5
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 5, $this->source); })()), "session", []), "get", [0 => "idVisiConnecte"], "method"), "html", null, true);
+            echo "    <div id=\"recap\">
+        Bonjour <br/>
+
+        votre identifiant : ";
+            // line 8
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "session", []), "get", [0 => "idVisiConnecte"], "method"), "html", null, true);
             echo "
+        
+        <br/>
 
-<br/>
-
-VOUS ETES CONNECTE EN TANT QUE VISITEUR
-
-<br/>
-<a href=\"..\\app_dev.php\\renseignerFiche\">Renseigner une fiche de frais</a>
-<br/>
-<a href=\"..\\app_dev.php\\consulterFiche\">Voir mes fiches de frais</a>
-<br/>
-
-<a href=\"..\\app_dev.php\\deconnexion\">deconnexion</a>
-
-
+        VOUS ETES CONNECTE EN TANT QUE VISITEUR
+        <br/>
+        <a href=\"..\\app_dev.php\\deconnexion\"><button>deconnexion</button></a>
+    </div>
+    <div id=\"callToActions\">
+        <br/>
+        <a href=\"..\\app_dev.php\\renseignerFiche\"><button id=\"btnMenu\">Renseigner une fiche de frais</button></a>
+        <br/>
+        <a href=\"..\\app_dev.php\\consulterFiche\"><button id=\"btnMenu\">Voir mes fiches de frais</button></a>
+        <br/>
+    </div>
 
 ";
         } else {
-            // line 22
+            // line 25
             echo "    <meta http-equiv=\"refresh\" content=\"0; url=..\\app_dev.php\\visiteur\" />
 ";
         }
@@ -88,30 +95,33 @@ VOUS ETES CONNECTE EN TANT QUE VISITEUR
 
     public function getDebugInfo()
     {
-        return array (  68 => 22,  48 => 5,  43 => 2,  41 => 1,);
+        return array (  75 => 25,  55 => 8,  50 => 5,  47 => 4,  45 => 3,  41 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% if app.session.get('idVisiConnecte') != null %}
-Bonjour <br/>
+        return new Source("
 
+{% if app.session.get('idVisiConnecte') != null %}
+    {% include ('base.html.twig') %}
+    <div id=\"recap\">
+        Bonjour <br/>
 
-votre identifiant : {{ app.session.get('idVisiConnecte') }}
+        votre identifiant : {{ app.session.get('idVisiConnecte') }}
+        
+        <br/>
 
-<br/>
-
-VOUS ETES CONNECTE EN TANT QUE VISITEUR
-
-<br/>
-<a href=\"..\\app_dev.php\\renseignerFiche\">Renseigner une fiche de frais</a>
-<br/>
-<a href=\"..\\app_dev.php\\consulterFiche\">Voir mes fiches de frais</a>
-<br/>
-
-<a href=\"..\\app_dev.php\\deconnexion\">deconnexion</a>
-
-
+        VOUS ETES CONNECTE EN TANT QUE VISITEUR
+        <br/>
+        <a href=\"..\\app_dev.php\\deconnexion\"><button>deconnexion</button></a>
+    </div>
+    <div id=\"callToActions\">
+        <br/>
+        <a href=\"..\\app_dev.php\\renseignerFiche\"><button id=\"btnMenu\">Renseigner une fiche de frais</button></a>
+        <br/>
+        <a href=\"..\\app_dev.php\\consulterFiche\"><button id=\"btnMenu\">Voir mes fiches de frais</button></a>
+        <br/>
+    </div>
 
 {%else %}
     <meta http-equiv=\"refresh\" content=\"0; url=..\\app_dev.php\\visiteur\" />
