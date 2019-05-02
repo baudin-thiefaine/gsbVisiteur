@@ -44,26 +44,16 @@ class RenseignerFicheController extends Controller {
         $lesLignesFraisHorsForfait = $this->getLesLignesFraisHorsForfait($laFiche);
         
         $formFraisForfait = $this->formAjouterFrais($laFiche);
-        $formFraisHorsForfait = $this->formAjouterFraisHorsForfait($laFiche);
         
         $formFraisForfait->initialize();
-        $formFraisHorsForfait->initialize();
         //////////////////////////////////////////////////////////
         
-        $vueformHorsForfait = $formFraisHorsForfait->createView();
         $request = Request::createFromGlobals();
-        $formFraisHorsForfait->handleRequest($request);
         dump ("form Forfait");
         dump($formFraisForfait->isSubmitted());
-        dump ("form FraisHorsForfait");
-        dump($formFraisHorsForfait->isSubmitted());
         
         $vueformForfait = $formFraisForfait->createView();
-        
         $formFraisForfait->handleRequest($request);
-        
-        $okform1 = true;
-        if ($okform1) {
 	if( $formFraisForfait->isSubmitted()){
             
             $data = $formFraisForfait->getData();
@@ -71,11 +61,42 @@ class RenseignerFicheController extends Controller {
             $qte = $data["Quantite"];
             
             $this->ajouterFraisForfait($idFrais, $qte, $laFiche);
-            $okform1 = false;
             return $this->redirectToRoute('tbb_gsb_visiteur_renseignerFiche');
 	}
-        }
+	 
         
+        ///////////////////////////////////////////////////////////
+        
+        return $this->render('@tbbGsbVisiteur/RenseignerFiche/pageTest.html.twig', 
+                array('fiche' => $laFiche , 
+                      'fraisForfait' =>$lesLignesFraisForfait ,
+                      'fraisHorsForfait' => $lesLignesFraisHorsForfait,
+                      'formFraisForfait' => $vueformForfait
+                ));
+    }
+    
+    
+    public function renseignerFraisHorsForfaitAction(){
+        $moisEnCours = $this->getMoisEnCours();
+        $annee = date('Y');
+        //on récupere la fiche concernant le mois en cours
+        $laFiche = $this->getFicheARenseigner($moisEnCours, $annee);
+        //on récupere les lignes de frais qui concernent cette fiche
+        $lesLignesFraisForfait = $this->getLesLignesFraisForfait($laFiche);
+        $lesLignesFraisHorsForfait = $this->getLesLignesFraisHorsForfait($laFiche);
+        
+        $formFraisHorsForfait = $this->formAjouterFraisHorsForfait($laFiche); //on récup le formulaire d'ajout
+        
+        $formFraisHorsForfait->initialize();
+        
+        
+        $vueformHorsForfait = $formFraisHorsForfait->createView();
+        $request = Request::createFromGlobals();
+        $formFraisHorsForfait->handleRequest($request);
+        
+        
+        dump ("form FraisHorsForfait");
+        dump($formFraisHorsForfait->isSubmitted());
 	if($formFraisHorsForfait->isSubmitted()){
             
             $data2 = $formFraisHorsForfait->getData();
@@ -87,16 +108,14 @@ class RenseignerFicheController extends Controller {
             
         }     
         
-        ///////////////////////////////////////////////////////////
-        
-        return $this->render('@tbbGsbVisiteur/RenseignerFiche/pageTest.html.twig', 
+        return $this->render('@tbbGsbVisiteur/RenseignerFiche/pageAjoutFraisHorsForfait.html.twig', 
                 array('fiche' => $laFiche , 
                       'fraisForfait' =>$lesLignesFraisForfait ,
                       'fraisHorsForfait' => $lesLignesFraisHorsForfait,
-                      'formFraisForfait' => $vueformForfait,
                       'formFraisHorsForfait' => $vueformHorsForfait
                 ));
     }
+    
     
     
     public function formAjouterFraisHorsForfait($laFiche){

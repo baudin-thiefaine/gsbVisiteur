@@ -14,6 +14,10 @@ tbb_gsb_visiteur_renseignerFiche:
     path:   /renseignerFiche
     defaults: { _controller:tbbGsbVisiteurBundle:RenseignerFiche:renseignerFiche }  
     
+tbb_gsb_visiteur_renseignerFraisHorsForfait:
+    path:   /renseignerFraisHorsForfait
+    defaults: { _controller:tbbGsbVisiteurBundle:RenseignerFiche:renseignerFraisHorsForfait } 
+    
 tbb_gsb_visiteur_consulterFiche:
     path:   /consulterFiche
     defaults: { _controller:tbbGsbVisiteurBundle:ConsultationFiche:getMoisFicheAValider } 
