@@ -29,10 +29,19 @@ class ConnexionController extends Controller {
     
     // ACTIONS
     
+   
     public function indexAction(){
         return $this->render('@tbbGsbVisiteur/Connexion/pageAccueil.html.twig');
     }
     
+    /**
+     * @name connexionAction
+     * route : /visiteur
+     * affiche une page permettant de se connecter et vérifie la connexion. Cette 
+     * action crée une session contenant les informations du visiteur connecté 
+     * lorsque la connexion est réussie
+     * @param Request $request
+     */
     public function connexionAction(Request $request){
         $form = $this->createFormBuilder()
 	            ->add('NomDUtilisateur', TextType::class)
@@ -55,7 +64,11 @@ class ConnexionController extends Controller {
         
     }
 
-    
+    /**
+     * @name deconnexionAction
+     * route : /deconnexion
+     * Supprime la session de l'utilisateur, et renvoie sur la page de connexion
+     */
     public function deconnexionAction(){
         $session = $this->get('session');
         $session->clear();
@@ -68,6 +81,15 @@ class ConnexionController extends Controller {
     
     // FONCTIONS
     
+    /**
+     * 
+     * @name verifConnexion
+     * permet de vérifier si les informations de connexions correspondent à un visiteur
+     * 
+     * @param String $nomCo login du visiteur
+     * @param String $mdp mot de passe du visiteur
+     * @return String la route vers la vue à afficher
+     */
     public function verifConnexion($nomCo, $mdp){
         $password = sha1($mdp);
         $em = $this->getDoctrine()->getManager();

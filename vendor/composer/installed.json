@@ -968,17 +968,17 @@
     },
     {
         "name": "doctrine/persistence",
-        "version": "v1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "1.1.1",
+        "version_normalized": "1.1.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/persistence.git",
-            "reference": "c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38"
+            "reference": "3da7c9d125591ca83944f477e65ed3d7b4617c48"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/persistence/zipball/c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38",
-            "reference": "c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38",
+            "url": "https://api.github.com/repos/doctrine/persistence/zipball/3da7c9d125591ca83944f477e65ed3d7b4617c48",
+            "reference": "3da7c9d125591ca83944f477e65ed3d7b4617c48",
             "shasum": ""
         },
         "require": {
@@ -997,7 +997,7 @@
             "phpstan/phpstan": "^0.8",
             "phpunit/phpunit": "^7.0"
         },
-        "time": "2018-11-21T00:33:13+00:00",
+        "time": "2019-04-23T08:28:24+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2020,17 +2020,17 @@
     },
     {
         "name": "symfony/phpunit-bridge",
-        "version": "v3.4.24",
-        "version_normalized": "3.4.24.0",
+        "version": "v3.4.27",
+        "version_normalized": "3.4.27.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/phpunit-bridge.git",
-            "reference": "bf7ca5d4d7eb1758a1f7bed11111f630ac2d4f57"
+            "reference": "a43a2f6c465a2d99635fea0addbebddc3864ad97"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/bf7ca5d4d7eb1758a1f7bed11111f630ac2d4f57",
-            "reference": "bf7ca5d4d7eb1758a1f7bed11111f630ac2d4f57",
+            "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/a43a2f6c465a2d99635fea0addbebddc3864ad97",
+            "reference": "a43a2f6c465a2d99635fea0addbebddc3864ad97",
             "shasum": ""
         },
         "require": {
@@ -2042,7 +2042,7 @@
         "suggest": {
             "symfony/debug": "For tracking deprecated interfaces usages at runtime with DebugClassLoader"
         },
-        "time": "2019-03-22T08:11:54+00:00",
+        "time": "2019-04-16T09:03:16+00:00",
         "bin": [
             "bin/simple-phpunit"
         ],
@@ -2560,17 +2560,17 @@
     },
     {
         "name": "symfony/symfony",
-        "version": "v3.4.24",
-        "version_normalized": "3.4.24.0",
+        "version": "v3.4.27",
+        "version_normalized": "3.4.27.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/symfony.git",
-            "reference": "4783969de06e5b8787b5e3ad2279f6b8aceeb81b"
+            "reference": "a9bb1182151d81054800aa4fa2680d92a5928a6a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/symfony/zipball/4783969de06e5b8787b5e3ad2279f6b8aceeb81b",
-            "reference": "4783969de06e5b8787b5e3ad2279f6b8aceeb81b",
+            "url": "https://api.github.com/repos/symfony/symfony/zipball/a9bb1182151d81054800aa4fa2680d92a5928a6a",
+            "reference": "a9bb1182151d81054800aa4fa2680d92a5928a6a",
             "shasum": ""
         },
         "require": {
@@ -2589,7 +2589,7 @@
             "symfony/polyfill-mbstring": "~1.0",
             "symfony/polyfill-php56": "~1.0",
             "symfony/polyfill-php70": "~1.6",
-            "twig/twig": "^1.35|^2.4.4"
+            "twig/twig": "^1.40|^2.9"
         },
         "conflict": {
             "phpdocumentor/reflection-docblock": "<3.0||>=3.2.0,<3.2.2",
@@ -2671,7 +2671,7 @@
             "symfony/phpunit-bridge": "~3.4|~4.0",
             "symfony/security-acl": "~2.8|~3.0"
         },
-        "time": "2019-04-02T13:48:13+00:00",
+        "time": "2019-05-01T13:04:01+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2717,17 +2717,17 @@
     },
     {
         "name": "twig/twig",
-        "version": "v2.7.4",
-        "version_normalized": "2.7.4.0",
+        "version": "v2.9.0",
+        "version_normalized": "2.9.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/twigphp/Twig.git",
-            "reference": "ed9c49220e09bfaeb1ba4d48077c08a7b09908dd"
+            "reference": "82a1c055c8ed4c4705023bfd0405f3c74db6e3ae"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/twigphp/Twig/zipball/ed9c49220e09bfaeb1ba4d48077c08a7b09908dd",
-            "reference": "ed9c49220e09bfaeb1ba4d48077c08a7b09908dd",
+            "url": "https://api.github.com/repos/twigphp/Twig/zipball/82a1c055c8ed4c4705023bfd0405f3c74db6e3ae",
+            "reference": "82a1c055c8ed4c4705023bfd0405f3c74db6e3ae",
             "shasum": ""
         },
         "require": {
@@ -2740,11 +2740,11 @@
             "symfony/debug": "^2.7",
             "symfony/phpunit-bridge": "^3.4.19|^4.1.8"
         },
-        "time": "2019-03-23T14:28:58+00:00",
+        "time": "2019-04-28T06:57:38+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.7-dev"
+                "dev-master": "2.9-dev"
             }
         },
         "installation-source": "dist",
